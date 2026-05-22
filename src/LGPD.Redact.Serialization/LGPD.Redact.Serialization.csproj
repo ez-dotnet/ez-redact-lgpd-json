@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../../lgpd_redact/src/LGPD.Redact.Core/LGPD.Redact.Core.csproj" />
+    <PackageReference Include="LGPD.Redact.Core" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
