@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Compliance.Classification;
 using LGPD.Redact.Core;
 
-namespace LGPD.Redact.Serialization;
+namespace EZ.Redact.Lgpd.Json;
 
 internal static class DadoPessoalMapping
 {

@@ -1,10 +1,10 @@
 using LGPD.Redact.Core;
-using LGPD.Redact.Serialization.NewtonsoftJson;
-using LGPD.Redact.Serialization.UnitTests.Models;
+using EZ.Redact.Lgpd.Json.NewtonsoftJson;
+using EZ.Redact.Lgpd.Json.Tests.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
-namespace LGPD.Redact.Serialization.UnitTests.NewtonsoftJson;
+namespace EZ.Redact.Lgpd.Json.Tests.NewtonsoftJson;
 
 public class LGPDRedactContractResolverTest
 {

@@ -2,7 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using LGPD.Redact.Core;
 
-namespace LGPD.Redact.Serialization.SystemTextJson;
+namespace EZ.Redact.Lgpd.Json.SystemTextJson;
 
 internal sealed class RedactingConverter<T> : JsonConverter<T>
 {

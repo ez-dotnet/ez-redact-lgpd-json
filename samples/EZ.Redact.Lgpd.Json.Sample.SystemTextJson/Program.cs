@@ -1,8 +1,8 @@
 using LGPD.Redact.Core;
-using LGPD.Redact.Serialization;
-using LGPD.Redact.Serialization.Sample.SystemTextJson;
-using LGPD.Redact.Serialization.Sample.SystemTextJson.Models;
-using LGPD.Redact.Serialization.SystemTextJson;
+using EZ.Redact.Lgpd.Json;
+using EZ.Redact.Lgpd.Json.Sample.SystemTextJson;
+using EZ.Redact.Lgpd.Json.Sample.SystemTextJson.Models;
+using EZ.Redact.Lgpd.Json.SystemTextJson;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;

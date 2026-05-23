@@ -1,4 +1,4 @@
-# LGPD.Redact.Serialization
+# EZ.Redact.Lgpd.Json
 
 [![NuGet Version](https://img.shields.io/badge/nuget-v1.0.0-blue.svg)](https://www.nuget.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Basta decorar suas models com os atributos do `LGPD.Redact.Core` e configurar o 
 ## Instalação
 
 ```bash
-dotnet add package LGPD.Redact.Serialization
+dotnet add package EZ.Redact.Lgpd.Json
 ```
 
 Registre os servicos no DI com `AddLGPDRedaction()`:
@@ -45,7 +45,7 @@ Registre o serviço de redação **antes** de configurar a serialização:
 
 ```csharp
 using LGPD.Redact.Core;
-using LGPD.Redact.Serialization;
+using EZ.Redact.Lgpd.Json;
 
 builder.Services.AddLGPDRedaction()
                 .AddSerialization();
@@ -122,7 +122,7 @@ builder.Services.PostConfigure<LGPDRedactOptions>(opts =>
 Adicione o modificador ao `DefaultJsonTypeInfoResolver`:
 
 ```csharp
-using LGPD.Redact.Serialization.SystemTextJson;
+using EZ.Redact.Lgpd.Json.SystemTextJson;
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
 
@@ -136,7 +136,7 @@ var options = new JsonSerializerOptions
 Em ASP.NET Core, configure os `JsonOptions` globais com `IConfigureOptions<>`:
 
 ```csharp
-using LGPD.Redact.Serialization.SystemTextJson;
+using EZ.Redact.Lgpd.Json.SystemTextJson;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.Extensions.Options;
 
@@ -163,7 +163,7 @@ builder.Services.AddTransient<IConfigureOptions<JsonOptions>, LGPDRedactJsonOpti
 Registre o `LGPDRedactContractResolver` — já registrado como singleton pelo `AddSerialization()`:
 
 ```csharp
-using LGPD.Redact.Serialization.NewtonsoftJson;
+using EZ.Redact.Lgpd.Json.NewtonsoftJson;
 
 var settings = new JsonSerializerSettings
 {
@@ -174,7 +174,7 @@ var settings = new JsonSerializerSettings
 Em ASP.NET Core com `AddNewtonsoftJson()`, use `IConfigureOptions<>`:
 
 ```csharp
-using LGPD.Redact.Serialization.NewtonsoftJson;
+using EZ.Redact.Lgpd.Json.NewtonsoftJson;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
@@ -262,8 +262,8 @@ Dois projetos de exemplo na pasta `samples/`:
 
 | Projeto | Descrição |
 | :--- | :--- |
-| [`LGPD.Redact.Serialization.Sample.SystemTextJson`](samples/LGPD.Redact.Serialization.Sample.SystemTextJson) | Redação com System.Text.Json, sem dependências extras |
-| [`LGPD.Redact.Serialization.Sample.NewtonsoftJson`](samples/LGPD.Redact.Serialization.Sample.NewtonsoftJson) | Redação com Newtonsoft.Json + `Microsoft.AspNetCore.Mvc.NewtonsoftJson` |
+| [`EZ.Redact.Lgpd.Json.Sample.SystemTextJson`](samples/EZ.Redact.Lgpd.Json.Sample.SystemTextJson) | Redação com System.Text.Json, sem dependências extras |
+| [`EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson`](samples/EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson) | Redação com Newtonsoft.Json + `Microsoft.AspNetCore.Mvc.NewtonsoftJson` |
 
 Cada sample expõe endpoints comparando configuração **manual** (dentro do endpoint) e **global** (via `IConfigureOptions<T>`).
 

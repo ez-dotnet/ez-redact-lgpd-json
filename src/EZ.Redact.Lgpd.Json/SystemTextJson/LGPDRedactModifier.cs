@@ -5,7 +5,7 @@ using System.Text.Json.Serialization.Metadata;
 using Microsoft.Extensions.Compliance.Classification;
 using LGPD.Redact.Core;
 
-namespace LGPD.Redact.Serialization.SystemTextJson;
+namespace EZ.Redact.Lgpd.Json.SystemTextJson;
 
 public static class LGPDRedactModifier
 {

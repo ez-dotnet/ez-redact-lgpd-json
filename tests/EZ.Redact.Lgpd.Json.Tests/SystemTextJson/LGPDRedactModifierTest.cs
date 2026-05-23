@@ -1,11 +1,11 @@
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
 using LGPD.Redact.Core;
-using LGPD.Redact.Serialization.SystemTextJson;
-using LGPD.Redact.Serialization.UnitTests.Models;
+using EZ.Redact.Lgpd.Json.SystemTextJson;
+using EZ.Redact.Lgpd.Json.Tests.Models;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LGPD.Redact.Serialization.UnitTests.SystemTextJson;
+namespace EZ.Redact.Lgpd.Json.Tests.SystemTextJson;
 
 public class LGPDRedactModifierTest
 {

@@ -1,8 +1,8 @@
 using LGPD.Redact.Core;
-using LGPD.Redact.Serialization;
-using LGPD.Redact.Serialization.NewtonsoftJson;
-using LGPD.Redact.Serialization.Sample.NewtonsoftJson;
-using LGPD.Redact.Serialization.Sample.NewtonsoftJson.Models;
+using EZ.Redact.Lgpd.Json;
+using EZ.Redact.Lgpd.Json.NewtonsoftJson;
+using EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson;
+using EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;

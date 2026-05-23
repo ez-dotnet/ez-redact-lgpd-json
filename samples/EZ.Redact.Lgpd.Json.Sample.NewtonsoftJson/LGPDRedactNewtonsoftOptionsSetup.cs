@@ -1,8 +1,8 @@
-using LGPD.Redact.Serialization.NewtonsoftJson;
+using EZ.Redact.Lgpd.Json.NewtonsoftJson;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
-namespace LGPD.Redact.Serialization.Sample.NewtonsoftJson;
+namespace EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson;
 
 internal sealed class LGPDRedactNewtonsoftOptionsSetup : IConfigureOptions<MvcNewtonsoftJsonOptions>
 {

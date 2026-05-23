@@ -1,9 +1,9 @@
 using LGPD.Redact.Core;
-using LGPD.Redact.Serialization.NewtonsoftJson;
+using EZ.Redact.Lgpd.Json.NewtonsoftJson;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace LGPD.Redact.Serialization;
+namespace EZ.Redact.Lgpd.Json;
 
 public static class SerializationRedactionExtensions
 {

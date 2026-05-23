@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EZ.Redact.Lgpd.Json/EZ.Redact.Lgpd.Json.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/EZ.Redact.Lgpd.Json.Tests/EZ.Redact.Lgpd.Json.Tests.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/EZ.Redact.Lgpd.Json.Sample.SystemTextJson/EZ.Redact.Lgpd.Json.Sample.SystemTextJson.csproj" />
+    <Project Path="samples/EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson/EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson.csproj" />
+  </Folder>
+</Solution>

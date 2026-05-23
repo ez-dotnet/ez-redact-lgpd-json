@@ -1,9 +1,9 @@
 using LGPD.Redact.Core;
-using LGPD.Redact.Serialization.SystemTextJson;
+using EZ.Redact.Lgpd.Json.SystemTextJson;
 using Microsoft.Extensions.Options;
 using System.Text.Json.Serialization.Metadata;
 
-namespace LGPD.Redact.Serialization.Sample.SystemTextJson;
+namespace EZ.Redact.Lgpd.Json.Sample.SystemTextJson;
 
 internal sealed class LGPDRedactJsonOptionsSetup : IConfigureOptions<Microsoft.AspNetCore.Http.Json.JsonOptions>
 {

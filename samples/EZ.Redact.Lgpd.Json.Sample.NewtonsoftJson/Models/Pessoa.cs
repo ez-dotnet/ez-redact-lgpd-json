@@ -1,6 +1,6 @@
 using LGPD.Redact.Core.Attributes;
 
-namespace LGPD.Redact.Serialization.Sample.NewtonsoftJson.Models;
+namespace EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson.Models;
 
 public class Pessoa
 {

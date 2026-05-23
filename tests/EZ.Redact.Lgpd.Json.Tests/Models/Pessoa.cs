@@ -1,6 +1,6 @@
 using LGPD.Redact.Core.Attributes;
 
-namespace LGPD.Redact.Serialization.UnitTests.Models;
+namespace EZ.Redact.Lgpd.Json.Tests.Models;
 
 public class Pessoa
 {

@@ -4,7 +4,7 @@ using LGPD.Redact.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace LGPD.Redact.Serialization.NewtonsoftJson;
+namespace EZ.Redact.Lgpd.Json.NewtonsoftJson;
 
 public class LGPDRedactContractResolver : DefaultContractResolver
 {
