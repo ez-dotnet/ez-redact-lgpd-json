@@ -1,4 +1,4 @@
-using LGPD.Redact.Core.Attributes;
+using EZ.Redact.Lgpd.Core.Attributes;
 
 namespace EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson.Models;
 

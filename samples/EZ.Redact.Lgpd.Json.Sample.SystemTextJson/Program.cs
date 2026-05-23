@@ -1,4 +1,4 @@
-using LGPD.Redact.Core;
+using EZ.Redact.Lgpd.Core;
 using EZ.Redact.Lgpd.Json;
 using EZ.Redact.Lgpd.Json.Sample.SystemTextJson;
 using EZ.Redact.Lgpd.Json.Sample.SystemTextJson.Models;

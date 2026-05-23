@@ -1,5 +1,5 @@
 using Microsoft.Extensions.Compliance.Classification;
-using LGPD.Redact.Core;
+using EZ.Redact.Lgpd.Core;
 
 namespace EZ.Redact.Lgpd.Json;
 

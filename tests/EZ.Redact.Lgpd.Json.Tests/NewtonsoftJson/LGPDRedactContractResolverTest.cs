@@ -1,4 +1,4 @@
-using LGPD.Redact.Core;
+using EZ.Redact.Lgpd.Core;
 using EZ.Redact.Lgpd.Json.NewtonsoftJson;
 using EZ.Redact.Lgpd.Json.Tests.Models;
 using Microsoft.Extensions.DependencyInjection;

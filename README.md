@@ -4,9 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET 8.0+](https://img.shields.io/badge/.NET-8.0%2B%20|%209.0%2B%20|%2010.0%2B-512bd4.svg)](https://dotnet.microsoft.com/download)
 
-Extensão de serialização para o [LGPD.Redact.Core](https://github.com/anomalyco/lgpd_redact). Redige dados pessoais automaticamente durante a serialização JSON com **System.Text.Json** e **Newtonsoft.Json**, sem precisar chamar `ILGPDRedactService` manualmente.
+Extensão de serialização para o [EZ.Redact.Lgpd.Core](https://github.com/anomalyco/lgpd_redact). Redige dados pessoais automaticamente durante a serialização JSON com **System.Text.Json** e **Newtonsoft.Json**, sem precisar chamar `ILGPDRedactService` manualmente.
 
-Basta decorar suas models com os atributos do `LGPD.Redact.Core` e configurar o serializador — a redação acontece de forma transparente.
+Basta decorar suas models com os atributos do `EZ.Redact.Lgpd.Core` e configurar o serializador — a redação acontece de forma transparente.
 
 ---
 
@@ -44,7 +44,7 @@ public static partial void LogNome(this ILogger logger, [NomeData] string nome);
 Registre o serviço de redação **antes** de configurar a serialização:
 
 ```csharp
-using LGPD.Redact.Core;
+using EZ.Redact.Lgpd.Core;
 using EZ.Redact.Lgpd.Json;
 
 builder.Services.AddLGPDRedaction()

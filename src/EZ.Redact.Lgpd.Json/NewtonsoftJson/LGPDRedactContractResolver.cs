@@ -1,6 +1,6 @@
 using System.Reflection;
 using Microsoft.Extensions.Compliance.Classification;
-using LGPD.Redact.Core;
+using EZ.Redact.Lgpd.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

@@ -1,4 +1,4 @@
-using LGPD.Redact.Core;
+using EZ.Redact.Lgpd.Core;
 using EZ.Redact.Lgpd.Json.SystemTextJson;
 using Microsoft.Extensions.Options;
 using System.Text.Json.Serialization.Metadata;
