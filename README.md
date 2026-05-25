@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET 8.0+](https://img.shields.io/badge/.NET-8.0%2B%20|%209.0%2B%20|%2010.0%2B-512bd4.svg)](https://dotnet.microsoft.com/download)
 
-Extensão de serialização para o [EZ.Redact.Lgpd.Core](https://github.com/anomalyco/lgpd_redact). Redige dados pessoais automaticamente durante a serialização JSON com **System.Text.Json** e **Newtonsoft.Json**, sem precisar chamar `ILGPDRedactService` manualmente.
+Extensão de serialização para o [EZ.Redact.Lgpd.Core](https://github.com/ez-dotnet/ez-redact-lgpd-core). Redige dados pessoais automaticamente durante a serialização JSON com **System.Text.Json** e **Newtonsoft.Json**, sem precisar chamar `ILGPDRedactService` manualmente.
 
 Basta decorar suas models com os atributos do `EZ.Redact.Lgpd.Core` e configurar o serializador — a redação acontece de forma transparente.
 
@@ -25,18 +25,6 @@ using Microsoft.Extensions.Logging;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLGPDRedaction();
 builder.Logging.EnableRedaction(options => options.ApplyDiscriminator = false);
-```
-
-> **Importante**: O nome do parâmetro do método deve corresponder exatamente ao nome do placeholder na mensagem do `[LoggerMessage]`. O source generator do Microsoft.Extensions.Logging valida essa correspondência em tempo de build.
-
-```csharp
-// ✅ Correto - nomes correspondentes
-[LoggerMessage(Message = "Meu nome é {Nome}")]
-public static partial void LogNome(this ILogger logger, [NomeData] string nome);
-
-// ❌ Erro de build - nomes não correspondentes
-[LoggerMessage(Message = "Meu nome é {PessoaNome}")]
-public static partial void LogNome(this ILogger logger, [NomeData] string nome);
 ```
 
 ## Configuração
@@ -266,6 +254,17 @@ Dois projetos de exemplo na pasta `samples/`:
 | [`EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson`](samples/EZ.Redact.Lgpd.Json.Sample.NewtonsoftJson) | Redação com Newtonsoft.Json + `Microsoft.AspNetCore.Mvc.NewtonsoftJson` |
 
 Cada sample expõe endpoints comparando configuração **manual** (dentro do endpoint) e **global** (via `IConfigureOptions<T>`).
+
+---
+
+## Projetos Relacionados
+
+| Projeto | Descrição |
+| :--- | :--- |
+| [EZ.Redact.Lgpd.Core](https://github.com/ez-dotnet/ez-redact-lgpd-core) | Biblioteca base de redação de dados sensíveis LGPD |
+| [EZ.Redact.Lgpd.EntityFramework](https://github.com/ez-dotnet/ez-redact-lgpd-entityframework) | Extensão para redação de dados em consultas Entity Framework |
+| [EZ.Redact.Lgpd.MongoDb](https://github.com/ez-dotnet/ez-redact-lgpd-mongodb) | Extensão para redação de dados em consultas MongoDB |
+| [EZ.Redact.Lgpd.Xml](https://github.com/ez-dotnet/ez-redact-lgpd-xml) | Extensão para redação de dados em serialização XML |
 
 ---
 
