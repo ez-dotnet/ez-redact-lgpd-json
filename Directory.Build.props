@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Gabriel Albuquerque</Authors>
+    <Title>EZ Redact Lgpd Json</Title>
+    <Description>Redação de dados sensíveis (LGPD) durante a serialização JSON com suporte a System.Text.Json e Newtonsoft.Json.</Description>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <Version>1.0.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>lgpd;redact;pii;data-privacy;compliance;brazil;serialization;json</PackageTags>
+    <RepositoryUrl>https://github.com/ez-dotnet/ez-redact-lgpd-json</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ez-dotnet/ez-redact-lgpd-json</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+</Project>
