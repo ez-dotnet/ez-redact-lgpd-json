@@ -1,6 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.Compliance.Classification;
 using EZ.Redact.Lgpd.Core;
+using EZ.Redact.Lgpd.Core.Taxonomies;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -23,8 +24,10 @@ public class LGPDRedactContractResolver : DefaultContractResolver
         if (attr == null)
             return property;
 
-        if (!DadoPessoalMapping.TryGet(attr.Classification, out var dadoPessoal))
+        if (attr.Classification.TaxonomyName != "LGPD")
             return property;
+
+        var dadoPessoal = LGPDTaxonomy.ToDadoPessoal(attr.Classification);
 
         if (property.PropertyType == typeof(string))
         {

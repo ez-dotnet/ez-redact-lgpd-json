@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 using Microsoft.Extensions.Compliance.Classification;
 using EZ.Redact.Lgpd.Core;
+using EZ.Redact.Lgpd.Core.Taxonomies;
 
 namespace EZ.Redact.Lgpd.Json.SystemTextJson;
 
@@ -30,8 +31,10 @@ public static class LGPDRedactModifier
 
                 var attr = (DataClassificationAttribute)attrs[0];
 
-                if (!DadoPessoalMapping.TryGet(attr.Classification, out var dadoPessoal))
+                if (attr.Classification.TaxonomyName != "LGPD")
                     continue;
+
+                var dadoPessoal = LGPDTaxonomy.ToDadoPessoal(attr.Classification);
 
                 if (property.PropertyType == typeof(string))
                 {

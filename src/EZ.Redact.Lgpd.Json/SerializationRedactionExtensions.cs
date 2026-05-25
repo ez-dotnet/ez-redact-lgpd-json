@@ -7,7 +7,7 @@ namespace EZ.Redact.Lgpd.Json;
 
 public static class SerializationRedactionExtensions
 {
-    public static ILGPDRedactionBuilder AddJsonRedaction(this ILGPDRedactionBuilder builder)
+    public static ILGPDRedactionBuilder AddSerialization(this ILGPDRedactionBuilder builder)
     {
         ArgumentNullException.ThrowIfNull(builder);
 
